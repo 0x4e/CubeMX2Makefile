@@ -213,6 +213,7 @@ def main():
     for mcu_regex_pattern, cflags in mcu_regex_to_DSP_dict.items():
         if re.match(mcu_regex_pattern, mcu_str):
             DSP_c_defs_subst += ' -D{}'.format(cflags)
+            c_defs_subst += ' -D{}'.format(cflags)
             break
 
     # Link script
